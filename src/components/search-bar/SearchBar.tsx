@@ -1,7 +1,12 @@
-import React from 'react';
 import './SearchBar.css';
 
-function SearchBar(props) {
+type SearchBarProps = {
+  term: string;
+  onSearch: (a: string) => void;
+  placeholder: string;
+};
+
+function SearchBar(props: SearchBarProps) {
   const { term, onSearch, placeholder } = props;
   return (
     <input

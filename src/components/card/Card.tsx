@@ -1,8 +1,12 @@
-import React from 'react';
+import { Monster } from '../../App';
 import './Card.css';
 
-function Card(props) {
-  const { monster } = props;
+type CardProps = {
+  monster: Monster;
+  key: Number;
+};
+
+function Card({ monster }: CardProps) {
   const srcImg = `https://robohash.org/${monster.id}?set=set2&size=180x180`;
   return (
     <div className="card-container">
